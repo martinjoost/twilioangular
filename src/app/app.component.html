@@ -4,9 +4,11 @@
 
 
   <input type="text" placeholder="ROOM" #roomInput>
-  <button mat-button color="primary" (click)="joinRoom(roomInput.value)" *ngIf="!loading">Primary</button>
+  <button mat-button color="primary" (click)="joinRoom(roomInput)" *ngIf="!loading">Primary</button>
   <mat-spinner *ngIf="loading"></mat-spinner>
-
-<span *ngIf="room">
-    {{room}}
-  </span>
+  <br>
+<span *ngIf="roomData">
+    Room name: {{roomData.name}}.
+    <br>
+    State: {{roomData.state}}
+</span>
